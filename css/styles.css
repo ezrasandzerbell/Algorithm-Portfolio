@@ -1,0 +1,120 @@
+.heading {
+  text-align: center;
+}
+
+.body {
+  text-align: center;
+}
+
+.outputArea {
+
+}
+
+.colLeft {
+  background-color: black;
+  height: 100vh;
+}
+
+.colRight {
+  padding-left: 15px;
+}
+
+.page-break-black-right-header {
+  background-color: black;
+  height: 5px;
+  width: 100%;
+  margin-bottom: -10px;
+}
+
+.page-break-gray {
+  background-color: gray;
+  height: 5px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.page-break-gray-top-left {
+  background-color: gray;
+  height: 2px;
+  width: 42%;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.page-break-gray-middle-left {
+  background-color: gray;
+  height: 1px;
+  width: 82%;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.header-right-right h1 {
+  font-weight: bolder;
+  font-size: 300%;
+}
+
+.header-right-left h1 {
+  font-weight: bolder;
+  font-size: 200%;
+}
+
+.header-right-left h4 {
+  font-weight: 200;
+  margin-top: -5px;
+}
+
+.header-left-main h1{
+  color: white;
+  padding-left: 30px;
+}
+
+.header-left-top-credits h5 {
+  color: white;
+  padding-left: 30px;
+}
+
+.header-left-top-credits {
+  margin-bottom: 35px;
+}
+
+.nodecoration {
+  text-decoration: none;
+}
+
+.nodecoration:hover, .nodecoration:active{
+  text-decoration: none;
+  color: lightblue;
+}
+
+.body-left-main h5 {
+  color: white;
+  margin-left: 30px;
+  font-weight: 200;
+  margin-top: 15px;
+}
+
+.section-number-red h1 {
+  color: red;
+  text-align: center;
+  font-weight: 200;
+}
+
+.section-header-black h3 {
+  font-weight: bold;
+}
+
+.section-subheader-black h4 {
+  font-weight: 300;
+}
+
+.alg-output-area {
+  display:none;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+
+/* start */
