@@ -1,6 +1,7 @@
 $(document).ready(function(){
   var btn1clicked = false;
   var btn2clicked = false;
+  var btn3clicked = false;
 
 // getValues function accelerates the value retrieval proccess
 
@@ -45,8 +46,6 @@ $(document).ready(function(){
      }
   });
 
-  var btn2clicked = false;
-
   $("form#alg2").submit(function(event){
     event.preventDefault();
     var allValues = getValues(2)
@@ -71,4 +70,62 @@ $(document).ready(function(){
        btn2clicked = false;
     }
   });
+
+// algorithm 3
+
+
+// algorithm #2
+
+  // Generate nine numbers at random
+  $("#btn3a").click(function(){
+     for(i=1; i<=9; i++ ){
+       $("#alg3in" + i).val(
+         (Math.floor(Math.random() * 10)) - Math.floor(Math.random() * 10)
+       );
+     }
+  });
+
+  $("form#alg3").submit(function(event){
+    event.preventDefault();
+    var allValues = getValues(3)
+    var numberOfInputs = allValues.length
+    var pos = 0;
+    var neg = 0;
+    var zero = 0;
+    var posnegzeroOutput = [];
+
+    if (btn3clicked == false) {
+
+      $.each(allValues, function(i,l){
+        if (l > 0){
+          pos++
+        } else if (l < 0){
+          neg++
+        } else if (l == 0) {
+          zero++
+        }
+      });
+      posnegzeroOutput.push(
+
+        (pos * 100 / (numberOfInputs )).toFixed(2),
+        (neg * 100 / (numberOfInputs )).toFixed(2),
+        (zero * 100 / (numberOfInputs )).toFixed(2)
+      );
+      console.log(posnegzeroOutput);
+
+      if (posnegzeroOutput){
+
+        $("#alg3output").html("Positive: " + posnegzeroOutput[0] + "%, " + "Negative: " + posnegzeroOutput[1] + "%, " + "Zero: " + posnegzeroOutput[2] + "%, ");
+        $("#alg3output").slideToggle();
+        $("#btn3b").html("Hide Solution");
+        $("#btn3b").attr('class', 'btn-danger');
+        btn3clicked = true;
+      }
+    } else if (btn3clicked == true) {
+       $("#alg3output").slideToggle();
+       $("#btn3b").html("New Calculation");
+       $("#btn3b").attr('class', 'btn-primary');
+       btn3clicked = false;
+    }
+   });
  });

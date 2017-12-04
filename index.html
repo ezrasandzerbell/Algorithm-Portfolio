@@ -17,7 +17,7 @@
       <script src="js/scripts.js"></script>
   </head>
   <body>
-      <div class="row">
+      <div class="row masterRow">
           <div class="col-md-4 colLeft">
             <div class="page-break-gray-top-left"></div>
             <div class="header-left-top-credits">
@@ -75,8 +75,10 @@
                 </div>
               </div>
 
-              <!-- Alg 2 -->
               <div class="page-break-gray-right"></div>
+
+              <!-- Alg 2 -->
+
 
               <div class="row">
                 <div class="col-md-2 section-number-red">
@@ -90,7 +92,7 @@
                     <h4>This algorithm will generate nine numbers at random and arrange them in a 3x3 array, find the sum for each diagonal line and then calculate the difference between them.</h4>
                     <br>
                     <button class="btn-primary" id="btn2a">Generate Numbers</button>
-                    <br>
+                    <br><br>
                   </div>
                   <form id="alg2" method="post">
                     <input type="number" id="alg2in1">
@@ -112,9 +114,46 @@
                   </div>
                 </div>
 
+                <div class="page-break-gray-right"></div>
+
+                <!-- alg 3 -->
+
+                <div class="row">
+                  <div class="col-md-2 section-number-red">
+                    <h1>03</h1>
+                  </div>
+                  <div class="col-md-10">
+                    <div class="section-header-black">
+                      <h3>Calculate Percentages</h3>
+                    </div>
+                    <div class="section-subheader-black">
+                      <h4>Generate nine random numbers and calculate the quantity of numbers that are odd, even, or zero in percentages to two decimals.</h4>
+                      <br>
+                      <button class="btn-primary" id="btn3a">Generate Numbers</button>
+                      <br><br>
+                    </div>
+                    <form id="alg3" method="post">
+                      <input type="number" id="alg3in1">
+                      <input type="number" id="alg3in2">
+                      <input type="number" id="alg3in3">
+                      <br>
+                      <input type="number" id="alg3in4">
+                      <input type="number" id="alg3in5">
+                      <input type="number" id="alg3in6">
+                      <br>
+                      <input type="number" id="alg3in7">
+                      <input type="number" id="alg3in8">
+                      <input type="number" id="alg3in9">
+                      <br><br>
+                      <div id="alg3output" class="alg-output-area"> </div>
+                      <button type="submit" class="btn-primary" id="btn3b">Calculate</button>
+                    </form>
+
+                    </div>
+                  </div>
+
+
             </div>
-
-
           </div>
   </body>
 </html>

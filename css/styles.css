@@ -6,13 +6,18 @@
   text-align: center;
 }
 
+.masterRow {
+  height: 100%;
+  margin-bottom: 100px;
+}
+
 .outputArea {
 
 }
 
 .colLeft {
   background-color: black;
-  height: 100vh;
+  height: 100%;
 }
 
 .colRight {
