@@ -93,8 +93,7 @@ $(document).ready(function(){
     var neg = 0;
     var zero = 0;
     var posnegzeroOutput = [];
-
-    if (btn3clicked == false) {
+    if (btn3clicked == false && allValues.length != 0) {
 
       $.each(allValues, function(i,l){
         if (l > 0){
@@ -115,7 +114,27 @@ $(document).ready(function(){
 
       if (posnegzeroOutput){
 
-        $("#alg3output").html("Positive: " + posnegzeroOutput[0] + "%, " + "Negative: " + posnegzeroOutput[1] + "%, " + "Zero: " + posnegzeroOutput[2] + "%, ");
+
+        $("#alg3output").html("Positive: " + posnegzeroOutput[0] + "%, " + "Negative: " + posnegzeroOutput[1] + "%, " + "Zero: " + posnegzeroOutput[2] + "%, " + '<div id="chartContainer" style="height: 200px; width: 200px;"></div>');
+        var chart = new CanvasJS.Chart("chartContainer", {
+        	animationEnabled: true,
+        	title: {
+        		text: ""
+        	},
+        	data: [{
+        		type: "pie",
+        		startAngle: 240,
+        		yValueFormatString: "##0.00\"%\"",
+        		indexLabel: "{label} {y}",
+        		dataPoints: [
+        			{y: posnegzeroOutput[0], label: "Positive"},
+        			{y: posnegzeroOutput[1], label: "Negative"},
+        			{y: posnegzeroOutput[2], label: "Zero"}
+        		]
+        	}]
+        });
+        chart.render();
+
         $("#alg3output").slideToggle();
         $("#btn3b").html("Hide Solution");
         $("#btn3b").attr('class', 'btn-danger');
