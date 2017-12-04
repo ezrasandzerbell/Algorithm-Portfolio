@@ -2,13 +2,25 @@ $(document).ready(function(){
   var btn1clicked = false;
   var btn2clicked = false;
 
+// getValues function accelerates the value retrieval proccess
+
+  function getValues(algid){
+    var i = 1;
+    var inputValues = [];
+    while ($("#alg" + algid + "in" + i).val()) {
+      inputValues.push($("#alg" + algid + "in" + i).val());
+      i++
+    }
+    return inputValues
+  }
+
+// algorithm #1
+
   $("form#alg1").submit(function(event){
     event.preventDefault();
     if (btn1clicked == false) {
-      var in1 = $("#alg1in1").val();
-      var in2 = $("#alg1in2").val();
-      var in3 = $("#alg1in3").val();
-      var sum = parseInt(in1) + parseInt(in2) + parseInt(in3)
+      var allValues = getValues(1)
+      var sum = parseInt(allValues[0]) + parseInt(allValues[1]) + parseInt(allValues[2])
       if (sum){
         $("#alg1output").html("Sum Total: " + sum);
         $("#alg1output").slideToggle();
@@ -24,6 +36,9 @@ $(document).ready(function(){
    }
  });
 
+// algorithm #2
+
+  // Generate nine numbers at random
   $("#btn2a").click(function(){
      for(i=1; i<=9; i++ ){
        $("#alg2in" + i).val(Math.floor(Math.random() * 10));
@@ -34,10 +49,10 @@ $(document).ready(function(){
 
   $("form#alg2").submit(function(event){
     event.preventDefault();
-
+    var allValues = getValues(2)
     if (btn2clicked == false) {
-      var sum1 = parseInt($("#alg2in1").val()) + parseInt($("#alg2in5").val()) + parseInt($("#alg2in9").val());
-      var sum2 = parseInt($("#alg2in3").val()) + parseInt($("#alg2in5").val()) + parseInt($("#alg2in7").val());
+      var sum1 = parseInt(allValues[0]) + parseInt(allValues[4]) + parseInt(allValues[8]) ;
+      var sum2 = parseInt(allValues[2]) +parseInt(allValues[4]) +parseInt(allValues[6]);
       if (sum1 && sum2){
         var result = sum1 - sum2;
         if (result < 0) {
