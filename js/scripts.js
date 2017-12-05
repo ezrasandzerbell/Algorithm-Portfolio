@@ -156,28 +156,34 @@ $(document).ready(function(){
 $("form#alg4").submit(function(event){
   event.preventDefault();
   var numberOfStairs = $("#alg4in1").val();
-  if (btn4clicked == false && numberOfStairs >= 3) {
+  var staircaseType = $("input:radio[name=staircaseType]:checked").val()
 
+  console.log("type", staircaseType);
+  if (btn4clicked == false && numberOfStairs >= 3 ) {
+    $("#alg4output").empty();
+    if (staircaseType == "staircase") {
       for (i=1; i <= numberOfStairs; i++){
-        currentStairQuantity = [];
+        var currentStairQuantity = [];
         for (j=1; j <= i; j++){
           currentStairQuantity.push("#");
         }
         $("#alg4output").append(currentStairQuantity.join("") + '<br>');
       }
-
-      for (a=numberOfStairs ; a > 0; a--){
-        currentStairQuantity = [];
-        for (s=1; s <= a; s++){
-          if (s == 1){
-            currentStairQuantity.push("#");
-          } else {
-            currentStairQuantity.push(" ");
-          }
+    } else if (staircaseType == "pyramid"){
+      for (s=1 ; s <= numberOfStairs; s++){
+        var currentStairLine = [];
+        var currentSpaceQty = numberOfStairs - s;
+        for (i = 1; i <= currentSpaceQty; i++){
+          currentStairLine.push("&nbsp")
         }
-        $("#alg4output").append(currentStairQuantity.join("") + '<br>');
-      }
+        for (j = 1; j <= s; j++){
+          currentStairLine.push("#")
+        }
+        console.log("spaces", currentStairLine);
 
+        $("#alg4output").append(currentStairLine.join("") + '<br>');
+      }
+    }
     $("#alg4output").slideToggle();
     $("#btn4").html("Hide Solution");
     $("#btn4").attr('class', 'btn-danger');
