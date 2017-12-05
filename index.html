@@ -7,6 +7,8 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
     <!-- Javascript -->
+
+
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.js"
@@ -15,101 +17,67 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight.js"></script>
       <script src="js/scripts.js"></script>
   </head>
   <body>
       <div class="row masterRow">
           <div class="col-md-4 colLeft">
-            <div class="page-break-gray-top-left"></div>
-            <div class="header-left-top-credits">
-              <h5>Ezra Sandzer-Bell | <a href="https://github.com/ezrasandzerbell" class="nodecoration">Github</a></h5>
-            </div>
-            <div class="header-left-main">
-              <h1>Explore Algorithms</h1>
-            </div>
-            <div class="body-left-main">
-              <h5><i>Noun</i>  |  al·go·rithm </h5>
-              <h5>A process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer.</h5>
-              <div class="page-break-gray-middle-left"></div>
-              <h5>This application is intended to showcase algorithms that I have solved through an interactive UI. All form submissions and transitions are handled with jQuery and CSS. </h5>
-              <iframe src="https://giphy.com/embed/XPqYtU9zmO6SA" width="380" height="380" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            <div class="box">
+              <div class="page-break-gray-top-left"></div>
+              <div class="header-left-top-credits">
+                <h5>Ezra Sandzer-Bell | <a href="https://github.com/ezrasandzerbell" class="nodecoration">Github</a></h5>
+              </div>
+              <div class="header-left-main">
+                <h1>Explore Algorithms</h1>
+              </div>
+              <div class="body-left-main">
+                <h5><i>Noun</i>  |  al·go·rithm </h5>
+                <h5>A process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer.</h5>
+                <div class="page-break-gray-middle-left"></div>
+                <h5>This application is intended to showcase algorithms that I have solved through an interactive UI. All form submissions and transitions are handled with jQuery and CSS. </h5>
+                <iframe src="https://giphy.com/embed/XPqYtU9zmO6SA" width="380" height="380" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+              </div>
+
             </div>
 
           </div>
 
           <div class="col-md-8 colRight">
-            <div class="page-break-black-right-header"></div>
-            <div class="row">
-              <div class="col-md-8 header-right-left">
-                <h1>Top Challenges</h1>
-                <h4>Try them out yourself!</h4>
-              </div>
-              <div class="col-md-4">
-                <span class="header-right-right pull-right">
-                  <h1>Total: 3</h1>
-                </span>
-              </div>
-            </div>
-            <div class="page-break-gray"></div>
-            <div class="row">
-              <div class="col-md-2 section-number-red">
-                <h1>01</h1>
-              </div>
-              <div class="col-md-10">
-                <div class="section-header-black">
-                  <h3>Add Three Numbers Together</h3>
+            <div class="box">
+              <div class="page-break-black-right-header"></div>
+              <div class="row">
+                <div class="col-md-8 header-right-left">
+                  <h1>Top Challenges</h1>
+                  <h4>Try them out yourself!</h4>
                 </div>
-                <div class="section-subheader-black">
-                  <h4>Enter three numbers and click submit to produce the sum. </h4>
-                </div>
-                <form id="alg1" method="post">
-                  <input type="number" id="alg1in1">
-                  <input type="number" id="alg1in2">
-                  <input type="number" id="alg1in3">
-                  <br><br>
-                  <div id="alg1output" class="alg-output-area"> </div>
-
-
-                  <button type="submit" class="btn-primary" id="btn1">Calculate</button>
-                </form>
-
+                <div class="col-md-4">
+                  <span class="header-right-right pull-right">
+                    <h1>Total: 3</h1>
+                  </span>
                 </div>
               </div>
-
-              <div class="page-break-gray-right"></div>
-
-              <!-- Alg 2 -->
-
-
+              <div class="page-break-gray"></div>
               <div class="row">
                 <div class="col-md-2 section-number-red">
-                  <h1>02</h1>
+                  <h1>01</h1>
                 </div>
                 <div class="col-md-10">
                   <div class="section-header-black">
-                    <h3>Diagonal Difference</h3>
+                    <h3>Add Three Numbers Together</h3>
                   </div>
                   <div class="section-subheader-black">
-                    <h4>This algorithm will generate nine numbers at random and arrange them in a 3x3 array, find the sum for each diagonal line and then calculate the difference between them.</h4>
-                    <br>
-                    <button class="btn-primary" id="btn2a">Generate Numbers</button>
-                    <br><br>
+                    <h4>Enter three numbers and click submit to produce the sum. </h4>
                   </div>
-                  <form id="alg2" method="post">
-                    <input type="number" id="alg2in1">
-                    <input type="number" id="alg2in2">
-                    <input type="number" id="alg2in3">
-                    <br>
-                    <input type="number" id="alg2in4">
-                    <input type="number" id="alg2in5">
-                    <input type="number" id="alg2in6">
-                    <br>
-                    <input type="number" id="alg2in7">
-                    <input type="number" id="alg2in8">
-                    <input type="number" id="alg2in9">
+                  <form id="alg1" method="post">
+                    <input type="number" id="alg1in1">
+                    <input type="number" id="alg1in2">
+                    <input type="number" id="alg1in3">
                     <br><br>
-                    <div id="alg2output" class="alg-output-area"> </div>
-                    <button type="submit" class="btn-primary" id="btn2b">Calculate</button>
+                    <div id="alg1output" class="alg-output-area"> </div>
+
+
+                    <button type="submit" class="btn-primary" id="btn1">Calculate</button>
                   </form>
 
                   </div>
@@ -117,81 +85,77 @@
 
                 <div class="page-break-gray-right"></div>
 
-                <!-- alg 3 -->
+                <!-- Alg 2 -->
+
 
                 <div class="row">
                   <div class="col-md-2 section-number-red">
-                    <h1>03</h1>
+                    <h1>02</h1>
                   </div>
                   <div class="col-md-10">
                     <div class="section-header-black">
-                      <h3>Calculate Percentages (Pie Chart)</h3>
+                      <h3>Diagonal Difference</h3>
                     </div>
                     <div class="section-subheader-black">
-                      <h4>Generate nine random numbers and calculate the quantity of numbers that are odd, even, or zero in percentages to two decimals.</h4>
+                      <h4>This algorithm will generate nine numbers at random and arrange them in a 3x3 array, find the sum for each diagonal line and then calculate the difference between them.</h4>
                       <br>
-                      <button class="btn-primary" id="btn3a">Generate Numbers</button>
+                      <button class="btn-primary" id="btn2a">Generate Numbers</button>
                       <br><br>
                     </div>
-                    <form id="alg3" method="post">
-                      <input type="number" id="alg3in1">
-                      <input type="number" id="alg3in2">
-                      <input type="number" id="alg3in3">
+                    <form id="alg2" method="post">
+                      <input type="number" id="alg2in1">
+                      <input type="number" id="alg2in2">
+                      <input type="number" id="alg2in3">
                       <br>
-                      <input type="number" id="alg3in4">
-                      <input type="number" id="alg3in5">
-                      <input type="number" id="alg3in6">
+                      <input type="number" id="alg2in4">
+                      <input type="number" id="alg2in5">
+                      <input type="number" id="alg2in6">
                       <br>
-                      <input type="number" id="alg3in7">
-                      <input type="number" id="alg3in8">
-                      <input type="number" id="alg3in9">
+                      <input type="number" id="alg2in7">
+                      <input type="number" id="alg2in8">
+                      <input type="number" id="alg2in9">
                       <br><br>
-                      <button type="submit" class="btn-primary" id="btn3b">Calculate</button>
-                      <br><br>
-                      <div id="alg3output" class="alg-output-area">
-
-                      </div>
+                      <div id="alg2output" class="alg-output-area"> </div>
+                      <button type="submit" class="btn-primary" id="btn2b">Calculate</button>
                     </form>
 
                     </div>
                   </div>
-                  
+
                   <div class="page-break-gray-right"></div>
 
-                  <!-- alg 4-->
+                  <!-- alg 3 -->
+
                   <div class="row">
                     <div class="col-md-2 section-number-red">
-                      <h1>04</h1>
+                      <h1>03</h1>
                     </div>
                     <div class="col-md-10">
                       <div class="section-header-black">
-                        <h3>Placeholder</h3>
+                        <h3>Calculate Percentages (Pie Chart)</h3>
                       </div>
                       <div class="section-subheader-black">
-                        <h4>Text placeholder testing graph</h4>
+                        <h4>Generate nine random numbers and calculate the quantity of numbers that are odd, even, or zero in percentages to two decimals.</h4>
                         <br>
-                        <button class="btn-primary" id="btn4a">Generate Numbers</button>
+                        <button class="btn-primary" id="btn3a">Generate Numbers</button>
                         <br><br>
                       </div>
-
-
-
-                      <form id="alg4" method="post">
-                        <input type="number" id="alg4in1">
-                        <input type="number" id="alg4in2">
-                        <input type="number" id="alg4in3">
+                      <form id="alg3" method="post">
+                        <input type="number" id="alg3in1">
+                        <input type="number" id="alg3in2">
+                        <input type="number" id="alg3in3">
                         <br>
-                        <input type="number" id="alg4in4">
-                        <input type="number" id="alg4in5">
-                        <input type="number" id="alg4in6">
+                        <input type="number" id="alg3in4">
+                        <input type="number" id="alg3in5">
+                        <input type="number" id="alg3in6">
                         <br>
-                        <input type="number" id="alg4in7">
-                        <input type="number" id="alg4in8">
-                        <input type="number" id="alg4in9">
+                        <input type="number" id="alg3in7">
+                        <input type="number" id="alg3in8">
+                        <input type="number" id="alg3in9">
                         <br><br>
-                        <button type="submit" class="btn-primary" id="btn4b">Calculate</button>
+                        <button type="submit" class="btn-primary" id="btn3b">Calculate</button>
                         <br><br>
-                        <div id="alg4output" class="alg-output-area">
+                        <div id="alg3output" class="alg-output-area">
 
                         </div>
                       </form>
@@ -199,7 +163,38 @@
                       </div>
                     </div>
 
+                    <div class="page-break-gray-right"></div>
+
+                    <!-- alg 4-->
+                    <div class="row">
+                      <div class="col-md-2 section-number-red">
+                        <h1>04</h1>
+                      </div>
+                      <div class="col-md-10">
+                        <div class="section-header-black">
+                          <h3>Build a Staircase</h3>
+                        </div>
+                        <div class="section-subheader-black">
+                          <h4>Enter a number between 3 and 10 to create a hashtag staircase.</h4>
+                          <br>
+                        </div>
+
+                        <form id="alg4" method="post">
+                          <input type="number" id="alg4in1" min="3" max="10">
+                          <br><br>
+                          <button type="submit" class="btn-primary" id="btn4">Build it!</button>
+                          <br><br>
+                          <div id="alg4output" class="alg-output-area">
+
+                          </div>
+                        </form>
+
+                        </div>
+                      </div>
+
+              </div>
             </div>
+
           </div>
   </body>
 </html>

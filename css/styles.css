@@ -8,7 +8,6 @@
 
 .masterRow {
   height: 100%;
-  margin-bottom: 100px;
 }
 
 .outputArea {
@@ -18,6 +17,7 @@
 .colLeft {
   background-color: black;
   height: 100%;
+    padding-bottom: 50px;
 }
 
 .colRight {

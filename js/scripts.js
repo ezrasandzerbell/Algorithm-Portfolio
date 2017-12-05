@@ -1,7 +1,13 @@
+
+
 $(document).ready(function(){
+  $(function() {
+  	$('.box').matchHeight();
+  });
   var btn1clicked = false;
   var btn2clicked = false;
   var btn3clicked = false;
+  var btn4clicked = false;
 
 // getValues function accelerates the value retrieval proccess
 
@@ -104,17 +110,14 @@ $(document).ready(function(){
           zero++
         }
       });
-      posnegzeroOutput.push(
 
+      posnegzeroOutput.push(
         (pos * 100 / (numberOfInputs )).toFixed(2),
         (neg * 100 / (numberOfInputs )).toFixed(2),
         (zero * 100 / (numberOfInputs )).toFixed(2)
       );
-      console.log(posnegzeroOutput);
 
       if (posnegzeroOutput){
-
-
         $("#alg3output").html("Positive: " + posnegzeroOutput[0] + "%, " + "Negative: " + posnegzeroOutput[1] + "%, " + "Zero: " + posnegzeroOutput[2] + "%, " + '<div id="chartContainer" style="height: 200px; width: 200px;"></div>');
         var chart = new CanvasJS.Chart("chartContainer", {
         	animationEnabled: true,
@@ -147,4 +150,46 @@ $(document).ready(function(){
        btn3clicked = false;
     }
    });
+
+// algorithm 4
+
+$("form#alg4").submit(function(event){
+  event.preventDefault();
+  var numberOfStairs = $("#alg4in1").val();
+  if (btn4clicked == false && numberOfStairs >= 3) {
+
+      for (i=1; i <= numberOfStairs; i++){
+        currentStairQuantity = [];
+        for (j=1; j <= i; j++){
+          currentStairQuantity.push("#");
+        }
+        $("#alg4output").append(currentStairQuantity.join("") + '<br>');
+      }
+
+      for (a=numberOfStairs ; a > 0; a--){
+        currentStairQuantity = [];
+        for (s=1; s <= a; s++){
+          if (s == 1){
+            currentStairQuantity.push("#");
+          } else {
+            currentStairQuantity.push(" ");
+          }
+        }
+        $("#alg4output").append(currentStairQuantity.join("") + '<br>');
+      }
+
+    $("#alg4output").slideToggle();
+    $("#btn4").html("Hide Solution");
+    $("#btn4").attr('class', 'btn-danger');
+    btn4clicked = true;
+
+  } else if (btn4clicked == true) {
+     $("#alg4output").slideToggle();
+     $("#btn4").html("New Calculation");
+     $("#btn4").attr('class', 'btn-primary');
+     btn4clicked = false;
+  }
+ });
+
+
  });
